@@ -6,6 +6,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroComponent } from './hero.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('HeroComponent (shallow tests)', () => {
     // fixture is a wrapper for an component and use in testing
@@ -30,5 +31,8 @@ describe('HeroComponent (shallow tests)', () => {
         fixture.detectChanges();
         // Gets a handle to the DOM element that represents the container for the template
         expect(fixture.nativeElement.querySelector('a').textContent).toContain('SuperDude');
+
+        let deA = fixture.debugElement.query(By.css('a'));
+        expect(deA.nativeElement.textContent).toContain('SuperDude');
     });
 });
