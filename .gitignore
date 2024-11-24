@@ -285,6 +285,32 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 
+# Build output
+/dist/
+/out-tsc/
+/*.tgz
+
+# Angular specific
+/.angular/
+
+# Temporary or junk files
+*.log
+*.tmp
+*.swp
+
+# Ignore RxJS source maps (optional, based on your project)
+node_modules/rxjs/dist/esm/internal/util/reportUnhandledError.js.map
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
 # Visual Studio 6 build log
 *.plg
 
